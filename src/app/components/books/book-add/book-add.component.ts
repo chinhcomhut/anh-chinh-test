@@ -12,7 +12,7 @@ import { Router} from '@angular/router';
 })
 export class BookAddComponent implements OnInit, OnDestroy {
   public subscription: Subscription;
-  public booksmodels: BooksModels
+  public booksmodels: BooksModels;
 
   constructor(
     public booksService: BooksService,

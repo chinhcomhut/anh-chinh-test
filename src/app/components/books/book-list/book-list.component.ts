@@ -25,4 +25,18 @@ public booksmodels: BooksModels[] = [];
     }
   }
 
+  onDeleteBook(id: number) {
+    this.subscription =  this.booksService.deleteBook(id).subscribe(data => {
+      this.updateDataAfterDelete(id);
+    });
+  }
+  updateDataAfterDelete(id: number) {
+for (let i = 0; i < this.booksmodels.length; i++) {
+  if (this.booksmodels[i].id === id) {
+    this.booksmodels.splice(i, 1);
+    break;
+  }
+}
+  }
+
 }
