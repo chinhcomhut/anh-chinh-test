@@ -10,7 +10,6 @@
         <th>STT</th>
         <th>Tên Sách</th>
         <th>Tác Giả</th>
-        <th>Mô tả</th>
         <th>Sửa</th>
         <th>Xóa</th>
       </tr>
@@ -18,9 +17,9 @@
       <tbody>
       <tr *ngFor="let item of booksmodels; let id = index">
         <td>{{id+1}}</td>
-        <td><a>{{item.title}}</a></td>
+        <td><a [routerLink]="'/content' + item.id">{{item.title}}</a></td>
         <td>{{item.author}}</td>
-        <td>{{item.description}}</td>
+
         <td>
           <button type = "button" class="btn btn-success">Sửa</button>
         </td>

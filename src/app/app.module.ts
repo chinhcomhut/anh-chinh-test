@@ -11,6 +11,7 @@ import { BookAddComponent } from './components/books/book-add/book-add.component
 import { BookEditComponent } from './components/books/book-edit/book-edit.component';
 import { BooksService} from './services/books.service';
 import {FormsModule} from "@angular/forms";
+import { ViewbookComponent } from './viewbook/viewbook.component';
 
 const appRoutes: Routes = [
   {
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     BookListComponent,
     BookAddComponent,
     BookEditComponent,
+    ViewbookComponent,
 
   ],
   imports: [
